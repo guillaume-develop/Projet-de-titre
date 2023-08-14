@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Corps de la page responsive*/
+
+/*dropdown survol*/
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: none;
+  }
+  .navbar .nav-item:hover .nav-link {
+    display: block;
+    background-color: darkcyan;
+    color: white !important;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-left: 45px;
+  }
+}
+
+/*Haut de pag > logo, titre, nav recherche*/
+
+.header {
+  width: 100%;
+  height: 80%;
+  box-shadow: 2px black;
+  /* background-color: darkcyan; */
+}
+
+#menu-connect {
+  display: flex;
+}
+#nav-down {
+  background-color: darkcyan !important;
+}
+#btn-back {
+  background-color: darkcyan !important;
+  color: white !important;
+}
+
+main {
+  min-height: 90vh;
+}
+
+.haut {
+  /* margin-left: auto; */
+  max-width: 100%;
+  /* background-color: darkcyan; */
+}
+/* titre de la page */
+.title {
+  font-family: "Rubik Iso", cursive, sans-serif;
+  font-size: 50px;
+  font-weight: bolder;
+}
+.infos {
+  position: relative;
+  text-align: center;
+  width: 80%;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: darkcyan;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* Container des liens de connexion login */
+.connect {
+  display: flex;
+  margin-right: 50px;
+  margin-top: 15px;
+  align-self: flex-end;
+}
+
+/* style des liens de conexion */
+.login {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  margin-top: 15px;
+}
+
+/*container de logo, barre de recherche et bouton start*/
+#search-container {
+  display: flex;
+  border-bottom: 1px solid black;
+  box-shadow: 4px;
+  margin-top: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+/*logo */
+#logo {
+  margin-left: 50px;
+  z-index: +1000;
+}
+
+/*Container du btnsearch, de son img et de la barre de recherche #minisearch*/
+#searchbar {
+  width: 300px;
+  position: relative;
+  margin-right: 5%;
+}
+/*Bouton de recherche*/
+#start {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px 0 black;
+}
+/*image du bouton de recherche*/
+#btnsearch {
+  width: 80%;
+}
+/*Barre de recherche*/
+#minisearch {
+  width: 100%;
+  height: 30px;
+}
+/* menu deroulant */
+
+/*Barre de navigation*/
+#navbar {
+  display: flex;
+  width: 100%;
+  margin-top: 109px;
+  background-color: darkcyan;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+}
+
+/*Style du premier niveau du menu dans les liens*/
+
+li a {
+  text-decoration: none;
+  color: white;
+  padding: 0 20px;
+}
+
+/* Carousel */
+#contain-carousel {
+  display: flex;
+  position: relative;
+  width: 90%;
+  height: 300px;
+  border: 1px solid black;
+  justify-self: center;
+  margin-left: 5%;
+
+  box-shadow: 0 5px 3px 0;
+}
+/*Container du titre h2 top vente*/
+#top h2 {
+  font-family: Arial, sans-serif;
+}
+/* Section des produits */
+
+.middle {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin-top: 40px;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  /* justify-content: space-around; */
+
+  /* Container d'un produit */
+}
+.product-container {
+  max-width: 25%;
+  /*Pourcentagedelataduparentquiluiestalloué*/
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  border: 1px solid black;
+}
+/*Traitement de l'image dans son ontainer*/
+.product-container > div > img {
+  width: 100%;
+}
+
+/* Animation sur les images */
+
+.product:hover {
+  border: 1px solid black;
+}
+
+/*Pied de page*/
+
+footer {
+  display: flex;
+  max-width: 100%;
+  height: 200px;
+  background-color: darkcyan;
+}
+
+@media (screen) {
+}
+/*Formulaire*/
+.btnconnexion {
+  background-color: darkcyan;
+}
+/*Mon compte*/
+
+.mypicture {
+  width: 150px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+button.gestion {
+  background-color: darkcyan;
+}
+button.gestion:hover {
+  background-color: grey;
+}
+a.gestion {
+  background-color: darkcyan;
+}
+a.gestion:hover {
+  background-color: grey;
+}
+
+#back:hover {
+  background-color: gray;
+}
+.modal-picture {
+  width: 40%;
+
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  
+}
+
+/* Tablettes */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}

@@ -1,0 +1,27 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .carousel-container {
+   
+    width: 100%;
+    
+    }
+  
+  .carousel {
+    display: flex; /* Afficher les cartes côte à côte */
+  }
+  
+  .card {
+    flex: 0 0 250px; /* Largeur de chaque carte */
+    height: 250px; /* Hauteur de chaque carte */
+    margin: 10px;
+    
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    
+  }
