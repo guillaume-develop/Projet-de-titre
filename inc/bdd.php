@@ -17,8 +17,8 @@ $myDb = new PDO(
 
 
 
-define('RACINE_SITE', $_SERVER['DOCUMENT_ROOT'] . '/Mon-projet-de-titre-test/');
-define('URL', 'http://localhost/Mon-projet-de-titre-test/');
+define('RACINE_SITE', $_SERVER['DOCUMENT_ROOT'] . '/Projet-de-titre/');
+define('URL', 'http://localhost/Projet-de-titre/');
 
 //inclusion des foncitons
 require_once 'fonctions.php';

@@ -184,7 +184,7 @@ require_once 'composants/header.php';
         <label for="photo">*image</label>
         <input type="file" value="<?= $produit->image ?>" name="image" class="form-control"><br>
 
-        <img src="<?= $produit->image ?>" width="45%"><br>
+        <img value="<?=$produit->image ?>" src="<?= $produit->image ?>" width="45%"><br>
 
 
 
