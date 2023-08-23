@@ -100,9 +100,10 @@ if ($_POST) {
     }
 
     $query = $myDb->prepare("
+
     UPDATE produits.* 
-    SET nom=?, prix=?, description=?, image=?, stock=?
-    WHERE id_produit = ?");
+    SET nom='?', prix='?', description='?', image='?', stock='?'
+    WHERE id_produit ='?'");
 
     $query->bindParam(1, $_POST['nom']);
     $query->bindParam(2, $_POST['prix'], PDO::PARAM_INT);
@@ -111,14 +112,14 @@ if ($_POST) {
     $query->bindParam(5, $_POST['stock'], PDO::PARAM_INT);
     $query->bindParam(6, $_GET['id'], PDO::PARAM_INT);
 
-
     $query->execute();
+
 
     $queryEdit = $myDb->prepare("
     UPDATE produits.*
     JOIN produits ON produits.id_editeur = editeur.id_editeur
-    SET editeur.nom = ?
-    WHERE editeur.id_editeur = produits.id_editeur AND produits.id_produit = ? 
+    SET editeur.nom = '?'
+    WHERE editeur.id_editeur = produits.id_editeur AND produits.id_produit = '?' 
     ");
 
 
