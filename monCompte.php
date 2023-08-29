@@ -7,7 +7,7 @@ require_once 'inc/bdd.php';
 $id = $_SESSION['client']['id_client'];
 
 //Modification:
-if (isset($_POST['inscription'])) {
+if (isset($_POST['update'])) {
 
     $photo_bdd =$_POST['photo_actuelle'];
 
@@ -61,7 +61,7 @@ require_once 'composants/header.php';
 
     <!-- bouton modal -->
     <div class=" col-md-6 mx-auto d-flex justify-content-end">
-        <a class="gestion btn mt-3 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" href="monComte.php">Modifier</a>
+        <a class="gestion btn mt-3 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" href="monCompte.php">Modifier</a>
     </div>
 </section>
 
@@ -113,7 +113,7 @@ require_once 'composants/header.php';
                     <input   type="hidden" name="photo_actuelle" value="<?= $membreConnecte['photo']?>">
 
                     
-                    <input type="submit" name="inscription" class="btn btn-success mt-3">
+                    <input type="submit" name="update" class="btn btn-success mt-3">
                 </form>
             </div>
             <div class="modal-footer">
