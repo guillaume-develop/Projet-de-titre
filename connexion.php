@@ -17,7 +17,7 @@ if ($_POST) {
     if ($isExist->rowCount() >= 1) {
 
         $client = $isExist->fetch(PDO::FETCH_ASSOC);
-        // debug($client);
+        debug($client);
 
         if (password_verify($_POST['mdp'], $client['mdp'])) {
 
@@ -68,7 +68,7 @@ require_once 'composants/header.php';
         <input type="password" name="mdp" class="form-control" placeholder="Entrez votre mot de passe"><br>
         <?php if (isset($errorMdp)) echo $errorMdp . "<br>"; ?>
 
-        <button type="submit" name="submit" class="btnconnexion  rounded-3 p-2 text-light">Se connecter</button>
+        <button type="submit" name="submit" class="btnconnexion rounded-3 p-2 text-light">Se connecter</button>
 
 
 

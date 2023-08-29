@@ -22,7 +22,10 @@ if (isset($_POST['update'])) {
 }
 
 
-$result = $myDb->query("SELECT * FROM client WHERE id_client = " . $_SESSION['client']['id_client']);
+$result = $myDb->query("
+SELECT * 
+FROM client 
+WHERE id_client = " . $_SESSION['client']['id_client']);
 
 $membreConnecte = $result->fetch(PDO::FETCH_ASSOC);
 // debug( $membreConnecte );
