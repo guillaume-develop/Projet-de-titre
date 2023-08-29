@@ -173,7 +173,7 @@ li a {
   margin-left: 5%;
   margin-right: 5%;
   flex-wrap: wrap;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   /* justify-content: space-around; */
 
   /* Container d'un produit */
@@ -239,7 +239,7 @@ a.gestion:hover {
   background-color: gray;
 }
 .modal-picture {
-  width: 40%;
+  width: 30%;
 
   background-position: center;
   background-size: cover;

@@ -4,7 +4,8 @@ require_once 'inc/bdd.php';
 // Requete d'affichage des poduits
 // Si il y a des donnéees dans mydb, je fait une requete d'affichage que je stock dans une variable recup 
 if (isset($_GET['id'])) {
-    $recup = $myDb->prepare("SELECT produits.*, editeur.nom as editeur_nom, plateforme.nom as plateforme_nom, genre.nom as genre_nom
+    $recup = $myDb->prepare("
+    SELECT produits.*, editeur.nom as editeur_nom, plateforme.nom as plateforme_nom, genre.nom as genre_nom
     FROM produits 
     LEFT JOIN editeur ON editeur.id_editeur = produits.id_editeur 
     LEFT JOIN genre ON genre.id_genre = produits.id_genre 
@@ -100,33 +101,30 @@ if ($_POST) {
     }
 
     $query = $myDb->prepare("
+    UPDATE produits
+    SET nom=?, prix=?, description=?, image=?, stock=?
+    WHERE id_produit=?");
 
-    UPDATE produits.* 
-    SET nom='?', prix='?', description='?', image='?', stock='?'
-    WHERE id_produit ='?'");
+$query->bindParam(1, $_POST['nom']);
+$query->bindParam(2, $_POST['prix'], PDO::PARAM_INT);
+$query->bindParam(3, $_POST['description']);
+$query->bindParam(4, $photo_bdd);
+$query->bindParam(5, $_POST['stock'], PDO::PARAM_INT);
+$query->bindParam(6, $_GET['id'], PDO::PARAM_INT);
 
-    $query->bindParam(1, $_POST['nom']);
-    $query->bindParam(2, $_POST['prix'], PDO::PARAM_INT);
-    $query->bindParam(3, $_POST['description']);
-    $query->bindParam(4, $photo_bdd);
-    $query->bindParam(5, $_POST['stock'], PDO::PARAM_INT);
-    $query->bindParam(6, $_GET['id'], PDO::PARAM_INT);
+$query->execute();
 
-    $query->execute();
+$queryEdit = $myDb->prepare("
+UPDATE produits AS p
+JOIN editeur AS e ON p.id_editeur = e.id_editeur
+SET e.nom = ?
+WHERE e.id_editeur = p.id_editeur AND p.id_produit = ? 
+");
 
+$queryEdit->bindParam(1, $_POST['editeur']);
+$queryEdit->bindParam(2, $_GET['id'], PDO::PARAM_INT);
 
-    $queryEdit = $myDb->prepare("
-    UPDATE produits.*
-    JOIN produits ON produits.id_editeur = editeur.id_editeur
-    SET editeur.nom = '?'
-    WHERE editeur.id_editeur = produits.id_editeur AND produits.id_produit = '?' 
-    ");
-
-
-    $queryEdit->bindParam(1, $_POST['editeur']);
-    $queryEdit->bindParam(2, $_GET['id'], PDO::PARAM_INT);
-
-    $queryEdit->execute();
+$queryEdit->execute();
 }
 
 

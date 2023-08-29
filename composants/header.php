@@ -21,7 +21,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light" id="nav-down">
 
-            <a href="index.php" class="text-decoration-none"><h1 class="ms-3 text-light ">LOGO</h1></a>
+            <a href="index.php"><img class="rounded-5 ms-3" src="assets/logo.jpg" width="60px"></a>
             <!-- //menu des articles             -->
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>

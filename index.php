@@ -33,7 +33,7 @@ require_once 'composants/header.php';
 <!-- Slider -->
 
 <div id="top" class=" d-flex justify-content-center text-center text-uppercase">
-    <h2 class="titre2 mt-3">Top des ventes</h2>
+    <h2 class="titre2 mt-3">Meilleures ventes</h2>
 </div>
 
 <?php include_once 'composants/carousel.php'; ?>
