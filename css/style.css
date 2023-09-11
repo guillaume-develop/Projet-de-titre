@@ -30,8 +30,6 @@
 .header {
   width: 100%;
   height: 80%;
-  box-shadow: 2px black;
-  /* background-color: darkcyan; */
 }
 
 #menu-connect {
@@ -55,21 +53,15 @@ main {
   /* background-color: darkcyan; */
 }
 /* titre de la page */
-.title {
+/* .title {
   font-family: "Rubik Iso", cursive, sans-serif;
-  font-size: 50px;
-  font-weight: bolder;
-}
-.infos {
-  position: relative;
-  text-align: center;
-  width: 80%;
-  margin-left: 20%;
-  margin-right: 20%;
-  color: darkcyan;
   font-size: 20px;
-  font-weight: bold;
-}
+  font-weight: bolder;
+  height: 30px;
+  background-color: darkcyan !important;
+  width: 100%;
+} */
+
 /* Container des liens de connexion login */
 .connect {
   display: flex;
@@ -196,6 +188,15 @@ li a {
 .product:hover {
   border: 1px solid black;
 }
+small{
+  font-size: 20px;
+}
+
+/*bouton panier*/
+.ajoutPanier{
+  background-color: darkcyan !important;
+  
+}
 
 /*Pied de page*/
 
@@ -243,6 +244,10 @@ a.gestion:hover {
 
   background-position: center;
   background-size: cover;
+}
+
+.noPanier{
+  font-size: 14px;
 }
 
 

@@ -29,35 +29,42 @@ if (isset($valider) && !empty(trim($keywords))) {
     <div class="col-md-5 mx-auto">
         <form action="" method="GET" class="d-flex">
             <input type="text" class="form-control" value="<?php echo $keywords ?>" placeholder="Recherche..." name="recherche">
-            <button type="submit" class="search-btn mx-2" name='valider'>Rechercher</button>
+            <button type="submit" class="search-btn mx-2 text-white p-1 rounded-2" name='valider'>Rechercher</button>
         </form>
+        
     </div>
     <?php if (@$afficher == "oui") { ?>
         
-            <div id="nbr"><?=count($filter) ?></div>
+            <div class="mt-2 ms-5" id="nbr"><?=count($filter) ?> produits trouvés</div>
 
             <section class="middle">
+                
+            
 
             <?php for($i=0;$i<count($filter);$i++) : ?>
                 
-                    <a class="product-container mb-2 ms-2" href="/ps2.html">
-                        <div class="">
-                            <img class="product" src="<?php echo $filter[$i]['image'] ?>" alt="" width="304px" height="267,7px">
-                            <h4 class="d-flex ms-2"><?php echo $filter[$i]['nom'] ?></h4>
-                            <span class="">Plateforme: <?= substr($unProduit->plateforme_nom, 0, 200); ?></span><br>
-                            <span class="2">Genre: <?= substr($unProduit->genre_nom, 0, 200); ?></span><br>
-                            <span class="2">Editeur: <?= substr($unProduit->editeur_nom, 0, 200); ?></span>
-                            <hr>
+                    
+                    <div class="product-container mb-2 ms-2">
+                <a class="text-decoration-none text-dark" href="/ps2.html">
+                <div>
+                    <img class="product" src="<?php echo $filter[$i]['image'] ?>" alt=""  height="267,7px">
+                    <h4 class="d-fle color-dark"><?php echo $filter[$i]['nom'] ?></h4>
+                    <span class="">Plateforme: <?= substr($unProduit->plateforme_nom, 0, 200); ?></span><br>
+                    <span class="2">Genre: <?= substr($unProduit->genre_nom, 0, 200); ?></span><br>
+                    <span class="2">Editeur: <?= substr($unProduit->editeur_nom, 0, 200); ?></span>
+                </div>
+            </a>
+                <hr>
 
-                            <div class="d-flex ms-2 mb-2 justify-centent-space-between">
+                <div class="d-flex ms-2 me-2 mb-2 justify-content-between">
 
-                                <button type="button" class=" btn btn-sm btn-outline-success">Acheter</button>
+                    <button type="button" action="panier" class="ajoutPanier btn btn-m border border-2 text-white mb-2  rounded-3">ajouter au panier</button>
 
-                                <small class="text-muted"><?= $unProduit->prix ?> €</small>
+                    <small class="text-dark me-3 "><?php echo $filter[$i]['prix'] ?> €</small>
+                </div>
+        </div>
 
-                            </div>
-                        </div>
-                    </a>
+                            
             <?php endfor; ?>
 
             </section>
