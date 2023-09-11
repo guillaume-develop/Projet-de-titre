@@ -5,9 +5,9 @@ session_start();
 //Création de la connexion avec ma base de données
 $myDb = new PDO(
     // je crée chemin , id, mdp pour la connexion
-    'mysql:host=localhost;dbname=retrogaming_shop',
-    'root',
-    '',
+    'mysql:host=localhost:3306;dbname=retro-gaming-shop',
+    'guillaume',
+    'watakushi',
     array(
         //recuperation et affichage des erreurs
         PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING,
